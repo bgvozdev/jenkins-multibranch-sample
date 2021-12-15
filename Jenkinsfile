@@ -11,6 +11,11 @@ pipeline {
             echo 'done deployment'
             exit 1
            }
-      }
+       }
+        stage('another deploy') {
+            steps {
+                echo 'another deployment'
+            }   
+        }
     }
 }
