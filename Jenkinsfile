@@ -16,7 +16,7 @@ pipeline {
                         state:"pending",
                         enableGating:true, 
                         serviceIds: [
-                          'b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzE1MTIwNzk0LWZiYTItNDFjNy04M2RhLWE1NWY2ZDU0N2ZmMi9jYzlkZDQxMC1hNWE5LTExZWMtYjM1OS0wZTNlN2EyMWE5MTE='
+                          'b:YXJpOmNsb3VkOmdyYXBoOjpzZXJ2aWNlLzdkYzU4ODQ2LTYzZDUtNGMwYS05YTYyLWJiYTBiYTVlNjEwYS9lOGQwMTAwMi1hNWFhLTExZWMtYjJiZC0wYWJlM2Y0YTY2MDE='
                         ]
                     )
             }
@@ -29,15 +29,14 @@ pipeline {
                         site:'bgvozdev-testing-gating.atlassian.net', 
                         environmentId:'us-prod-1'
                       )
-                  }
-                }   
+                  }   
             }
         }
        stage('deploy') {
            steps {
-            echo 'done deployment'
+            echo 'done deployment!!!'
             exit 1
            }
-      }
+       }
     }
 }
