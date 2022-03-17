@@ -29,8 +29,7 @@ pipeline {
                         site:'bgvozdev-testing-gating.atlassian.net', 
                         environmentId:'us-prod-1'
                       )
-                  }
-                }   
+                  }   
             }
         }
        stage('deploy') {
@@ -38,6 +37,6 @@ pipeline {
             echo 'done deployment'
             exit 1
            }
-      }
+       }
     }
 }
