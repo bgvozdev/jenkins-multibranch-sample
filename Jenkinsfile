@@ -20,7 +20,7 @@ pipeline {
                         ]
                     )
             }
-        }
+          } 
         stage("Approval gate") { 
             steps {
                   waitUntil {
@@ -30,9 +30,8 @@ pipeline {
                         environmentId:'us-prod-1'
                       )
                   }
-                }   
-            }
-        }
+              }   
+          }
        stage('deploy') {
            steps {
             echo 'done deployment'
