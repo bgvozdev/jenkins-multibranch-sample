@@ -35,7 +35,7 @@ pipeline {
         }
        stage('deploy') {
            steps {
-            echo 'done deployment'
+            echo 'done deployment!'
             exit 1
            }
       }
