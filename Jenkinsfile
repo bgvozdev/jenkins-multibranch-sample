@@ -32,7 +32,6 @@ pipeline {
                   }
                 }   
             }
-        }
        stage('deploy') {
            steps {
             echo 'done deployment'
