@@ -9,7 +9,7 @@ pipeline {
         stage('Request approval') { // Raise change request
             steps {
                 echo 'Raise change request...'
-                jiraSendDeploymentInfo(site:'bgvozdev-testing-gating.atlassian.net',
+                jiraSendDeploymentInfo(site:'bgvozdev.atlassian.net',
                         environmentId:'us-prod-1',
                         environmentName:'us-prod-1',
                         environmentType:'production',
@@ -26,13 +26,12 @@ pipeline {
                   waitUntil {
                       sleep 5
                       checkGatingStatus(
-                        site:'bgvozdev-testing-gating.atlassian.net', 
+                        site:'bgvozdev.atlassian.net', 
                         environmentId:'us-prod-1'
                       )
                   }
                 }   
             }
-        }
        stage('deploy') {
            steps {
             echo 'done deployment'
